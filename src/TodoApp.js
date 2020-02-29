@@ -9,7 +9,7 @@ export default function TodoApp() {
   const initialTodos = [
     { id: 1, task: "Todo One", completed: false },
     { id: 2, task: "Todo Two", completed: true },
-    { id: 3, task: "Todo One", completed: false }
+    { id: 3, task: "Todo Three", completed: false }
   ];
   const [todos, setTodos] = useState([]);
   return (
