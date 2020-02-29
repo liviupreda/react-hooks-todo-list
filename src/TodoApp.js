@@ -6,7 +6,23 @@ import ToolBar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 
 export default function TodoApp() {
-  return <h1>Todo List</h1>;
+  return (
+    <Paper
+      style={{
+        padding: 0,
+        margin: 0,
+        height: "100vh",
+        backgroundColor: "#fafafa"
+      }}
+      elevation={0}
+    >
+      <AppBar color="primary" position="static" style={{ height: "64px" }}>
+        <ToolBar>
+          <Typography color="inherit">Todos With Hooks</Typography>
+        </ToolBar>
+      </AppBar>
+    </Paper>
+  );
 }
 
 // -- TodoApp
