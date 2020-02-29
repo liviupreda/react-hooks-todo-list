@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import AppBar from "@material-ui/core/AppBar";
@@ -6,6 +6,12 @@ import ToolBar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 
 export default function TodoApp() {
+  const initialTodos = [
+    { id: 1, task: "Todo One", completed: false },
+    { id: 2, task: "Todo Two", completed: true },
+    { id: 3, task: "Todo One", completed: false }
+  ];
+  const [todos, setTodos] = useState([]);
   return (
     <Paper
       style={{
@@ -29,3 +35,6 @@ export default function TodoApp() {
 //   -- TodoForm
 //   -- TodoList
 //     -- TodoItem
+
+// Todo:
+// id, task (content of the todo), completed (true/ false)
