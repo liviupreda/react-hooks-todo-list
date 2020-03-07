@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 import Typography from "@material-ui/core/Typography";
@@ -16,7 +17,7 @@ export default function TodoApp() {
   const [todos, setTodos] = useState(initialTodos);
   // Will use addTodo to handle TodoForm submit
   const addTodo = newTodoText => {
-    setTodos([...todos, { id: 4, task: newTodoText, completed: false }]);
+    setTodos([...todos, { id: uuidv4(), task: newTodoText, completed: false }]);
   };
 
   const removeTodo = todoId => {
