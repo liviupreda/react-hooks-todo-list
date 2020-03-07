@@ -19,6 +19,13 @@ export default function TodoApp() {
     setTodos([...todos, { id: 4, task: newTodoText, completed: false }]);
   };
 
+  const removeTodo = todoId => {
+    // use todoId to filter out removed todo
+    const updatedTodos = todos.filter(todo => todo.id !== todoId);
+    // call setTodos with new Todos array
+    setTodos(updatedTodos);
+  };
+
   useEffect(() => {
     document.title = "React Hooks Todo List";
   }, []);
@@ -41,7 +48,7 @@ export default function TodoApp() {
       <Grid container justify="center" style={{ marginTop: "1rem" }}>
         <Grid item xs={11} md={8} lg={4}>
           <TodoForm addTodo={addTodo} />
-          <TodoList todos={todos} />
+          <TodoList todos={todos} removeTodo={removeTodo} />
         </Grid>
       </Grid>
     </Paper>
