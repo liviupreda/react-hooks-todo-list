@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 import Typography from "@material-ui/core/Typography";
@@ -18,6 +18,11 @@ export default function TodoApp() {
   const addTodo = newTodoText => {
     setTodos([...todos, { id: 4, task: newTodoText, completed: false }]);
   };
+
+  useEffect(() => {
+    document.title = "React Hooks Todo List";
+  }, []);
+
   return (
     <Paper
       style={{
