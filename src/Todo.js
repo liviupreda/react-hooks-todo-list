@@ -1,4 +1,5 @@
 import React from "react";
+import useToggleState from "./hooks/useToggleState";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -8,6 +9,7 @@ import EditIcon from "@material-ui/icons/Edit";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 
 function Todo({ id, task, completed, removeTodo, toggleTodo }) {
+  const [isEditing, toggle] = useToggleState(false);
   return (
     <ListItem>
       {/* tabindex of -1 => the control does not receive focus when using the tab key. */}
