@@ -8,17 +8,17 @@ export default function TodoList({ todos, removeTodo }) {
   return (
     <Paper>
       <List>
-        {todos.map(todo => (
-          <>
+        {todos.map((todo, i) => (
+          <div key={i}>
             <Todo
               id={todo.id}
-              task={todo.task}
               key={todo.id}
+              task={todo.task}
               completed={todo.completed}
               removeTodo={removeTodo}
             />
             <Divider />
-          </>
+          </div>
         ))}
       </List>
     </Paper>
