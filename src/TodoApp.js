@@ -27,6 +27,13 @@ export default function TodoApp() {
     setTodos(updatedTodos);
   };
 
+  const toggleTodo = todoId => {
+    const updatedTodos = todos.map(todo =>
+      todo.id === todoId ? { ...todo, completed: !todo.completed } : todo
+    );
+    setTodos(updatedTodos);
+  };
+
   useEffect(() => {
     document.title = "React Hooks Todo List";
   }, []);
@@ -49,7 +56,11 @@ export default function TodoApp() {
       <Grid container justify="center" style={{ marginTop: "1rem" }}>
         <Grid item xs={11} md={8} lg={4}>
           <TodoForm addTodo={addTodo} />
-          <TodoList todos={todos} removeTodo={removeTodo} />
+          <TodoList
+            todos={todos}
+            removeTodo={removeTodo}
+            toggleTodo={toggleTodo}
+          />
         </Grid>
       </Grid>
     </Paper>
