@@ -16,7 +16,12 @@ function Todo({ id, task, completed, removeTodo, toggleTodo, editTodo }) {
   return (
     <ListItem>
       {isEditing ? (
-        <EditTodoForm editTodo={editTodo} id={id} task={task} />
+        <EditTodoForm
+          editTodo={editTodo}
+          id={id}
+          task={task}
+          toggleEditForm={toggle}
+        />
       ) : (
         <>
           {/* tabindex of -1 => the control does not receive focus when using the tab key. */}
