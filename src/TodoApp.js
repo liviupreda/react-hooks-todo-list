@@ -15,7 +15,11 @@ function TodoApp() {
     { id: 3, task: "Todo Three", completed: false }
   ];
   const [todos, setTodos] = useState(initialTodos);
-  // Will use addTodo to handle TodoForm submit
+
+  useEffect(() => {
+    document.title = "React Hooks Todo List";
+  }, []);
+
   const addTodo = newTodoText => {
     setTodos([...todos, { id: uuidv4(), task: newTodoText, completed: false }]);
   };
@@ -40,10 +44,6 @@ function TodoApp() {
     );
     setTodos(updatedTodos);
   };
-
-  useEffect(() => {
-    document.title = "React Hooks Todo List";
-  }, []);
 
   return (
     <Paper
