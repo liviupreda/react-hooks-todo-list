@@ -33,7 +33,7 @@ function Todo({ id, task, completed, removeTodo, toggleTodo }) {
             <IconButton aria-label="Delete" onClick={() => removeTodo(id)}>
               <DeleteIcon />
             </IconButton>
-            <IconButton aria-label="Edit">
+            <IconButton aria-label="Edit" onClick={toggle}>
               <EditIcon />
             </IconButton>
           </ListItemSecondaryAction>
