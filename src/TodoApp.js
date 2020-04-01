@@ -20,6 +20,11 @@ function TodoApp() {
     document.title = "React Hooks Todo List";
   }, []);
 
+  // Sync todos to local storage
+  useEffect(() => {
+    window.localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
   const addTodo = newTodoText => {
     setTodos([...todos, { id: uuidv4(), task: newTodoText, completed: false }]);
   };
