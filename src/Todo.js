@@ -14,7 +14,7 @@ function Todo({ id, task, completed, removeTodo, toggleTodo, editTodo }) {
   // that are set by the custom hook useToggleState
   const [isEditing, toggle] = useToggleState(false);
   return (
-    <ListItem>
+    <ListItem style={{ height: "64px" }}>
       {isEditing ? (
         <EditTodoForm
           editTodo={editTodo}
