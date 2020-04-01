@@ -8,7 +8,7 @@ import AppBar from "@material-ui/core/AppBar";
 import ToolBar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 
-export default function TodoApp() {
+function TodoApp() {
   const initialTodos = [
     { id: 1, task: "Todo One", completed: false },
     { id: 2, task: "Todo Two", completed: true },
@@ -74,6 +74,8 @@ export default function TodoApp() {
     </Paper>
   );
 }
+
+export default TodoApp;
 
 // -- TodoApp
 //   -- TodoForm
