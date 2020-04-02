@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import useLocalStorageState from "./hooks/useLocalStorageState";
 import useTodoState from "./hooks/useTodoState";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
