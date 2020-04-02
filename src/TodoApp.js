@@ -9,7 +9,7 @@ import ToolBar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 
 function TodoApp() {
-  const initialTodos = JSON.parse(window.localStorage.getItem("todos") || "[]");
+  const initialTodos = [{ id: 1, task: "Pet a Monkey", completed: false }];
   const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(
     initialTodos
   );
@@ -17,10 +17,6 @@ function TodoApp() {
   useEffect(() => {
     document.title = "React Hooks Todo List";
   }, []);
-
-  useEffect(() => {
-    window.localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
 
   return (
     <Paper
