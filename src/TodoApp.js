@@ -53,11 +53,3 @@ function TodoApp() {
 }
 
 export default TodoApp;
-
-// -- TodoApp
-//   -- TodoForm
-//   -- TodoList
-//     -- TodoItem
-
-// Todo:
-// id, task (content of the todo), completed (true/ false)
