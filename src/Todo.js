@@ -10,8 +10,6 @@ import EditIcon from "@material-ui/icons/Edit";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 
 function Todo({ id, task, completed, removeTodo, toggleTodo, editTodo }) {
-  // Could rename toggle to toggleIsEditing, if more pieces of state are used
-  // that are set by the custom hook useToggleState
   const [isEditing, toggle] = useToggleState(false);
   return (
     <ListItem style={{ height: "64px" }}>
@@ -24,7 +22,6 @@ function Todo({ id, task, completed, removeTodo, toggleTodo, editTodo }) {
         />
       ) : (
         <>
-          {/* tabindex of -1 => the control does not receive focus when using the tab key. */}
           <Checkbox
             tabIndex={-1}
             checked={completed}
