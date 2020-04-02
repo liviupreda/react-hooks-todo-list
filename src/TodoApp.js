@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import useLocalStorageState from "./hooks/useLocalStorageState";
 import useTodoState from "./hooks/useTodoState";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
@@ -9,7 +10,7 @@ import ToolBar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 
 function TodoApp() {
-  const initialTodos = [{ id: 1, task: "Pet a Monkey", completed: false }];
+  const initialTodos = [{ id: 1, task: "test task", completed: false }];
   const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(
     initialTodos
   );
