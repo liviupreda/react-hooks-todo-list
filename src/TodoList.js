@@ -18,7 +18,6 @@ export default function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
                 toggleTodo={toggleTodo}
                 editTodo={editTodo}
               />
-              {/* Do not render Divider for the last todo in the array */}
               {i < todos.length - 1 && <Divider />}
             </div>
           ))}
