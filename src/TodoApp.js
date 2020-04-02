@@ -9,11 +9,12 @@ import ToolBar from "@material-ui/core/Toolbar";
 import Grid from "@material-ui/core/Grid";
 
 function TodoApp() {
-  const initialTodos = [
-    { id: 1, task: "Todo One", completed: false },
-    { id: 2, task: "Todo Two", completed: true },
-    { id: 3, task: "Todo Three", completed: false }
-  ];
+  const initialTodos = JSON.parse(window.localStorage.getItem("todos") || "[]");
+  // const initialTodos = [
+  //   { id: 1, task: "Todo One", completed: false },
+  //   { id: 2, task: "Todo Two", completed: true },
+  //   { id: 3, task: "Todo Three", completed: false }
+  // ];
   const [todos, setTodos] = useState(initialTodos);
 
   useEffect(() => {
