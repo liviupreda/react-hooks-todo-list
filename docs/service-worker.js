@@ -14,11 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-<<<<<<< HEAD
-  "/precache-manifest.d5588b32d15e4a8bd7cbbf61c5399684.js"
-=======
-  "/precache-manifest.235bacd4a17189788b11ab8ec36665ea.js"
->>>>>>> revert/before-localstoragestate-hook
+  "/precache-manifest.b49ec550a7f37fdd19d6ac584a5a6800.js"
 );
 
 self.addEventListener('message', (event) => {
